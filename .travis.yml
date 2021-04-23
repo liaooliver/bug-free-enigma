@@ -13,11 +13,11 @@ script:
   - docker build -t oliver79913/image_test .
   - docker image ls
   - docker push oliver79913/image_test
-  - docker push registry.heroku.com/$HEROKU_APP_NAME;
+  # - docker push registry.heroku.com/$HEROKU_APP_NAME;
 
 deploy:
   provider: heroku
   script: 
-    docker image ps
+    heroku container:push web
   on:
     branch: master
