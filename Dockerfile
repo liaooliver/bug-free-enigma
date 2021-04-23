@@ -13,8 +13,8 @@ RUN npm install
 COPY . /usr/src/app
 ENV NODE_ENV: production
 
-# 運行時容器提供的服務端口
-EXPOSE 8080
+# 運行時容器提供的服務端口 but Expose is NOT supported by Heroku
+# EXPOSE 8080
 
 # 設定預設指令
 CMD node index.js
