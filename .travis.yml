@@ -9,6 +9,6 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
-  - docker build -t travis/image_test .
+  - docker build -t oliver79913/image_test .
   - docker image ls
-  - docker push travis/image_test
+  - docker push oliver79913/image_test
