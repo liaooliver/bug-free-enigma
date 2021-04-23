@@ -11,3 +11,4 @@ before_install:
 script:
   - docker build -t oliver001 .
   - docker image ls
+  - docker push travis/image_test
