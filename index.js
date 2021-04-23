@@ -6,7 +6,7 @@ app.get('/', (request, response) => {
     response.send(`
         < h1 > Hello, I'm Larry.</h1>
         < h2 > HELLO, TEST　CICS DONE</h2 >
-        <p>ENV VAR: ${ process.env.NODE_ENV }, ENV VAR: ${ process.env.NODE_ENV }</p>
+        <p>ENV VAR: ${ process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL }, ENV VAR: ${ process.env.NODE_ENV }</p>
     `)
 })
 
