@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - node
+
+services:
+  - docker
+
+before_install:
+  - docker build -t oliver001 .
+  - docker image ls
