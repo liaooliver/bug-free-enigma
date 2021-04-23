@@ -1,0 +1,15 @@
+version: '3.6'
+services:
+  oliver001:
+    image: oliver001
+    build: .
+    environment:
+      NODE_ENV: production
+      GOOGLE_SERVICE_ACCOUNT_EMAIL: ABCDEF
+      GOOGLE_PRIVATE_KEY: ABCDEF
+    ports:
+      - 3030:8080
+    volumes:
+      - .:/usr/src/app
+
+      
