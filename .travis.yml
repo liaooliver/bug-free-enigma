@@ -17,10 +17,9 @@ node_js:
 
 deploy:
   provider: heroku
-  api_key:
-    secure: $HEROKU_AUTH_TOKEN
+  api_key: $HEROKU_AUTH_TOKEN
   app: $HEROKU_APP_NAME
-  script: 
-    heroku container:push web
+  # script: 
+  #   heroku container:push web
   on:
     branch: master
