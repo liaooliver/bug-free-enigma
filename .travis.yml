@@ -13,7 +13,7 @@ script:
   - docker build -t oliver79913/node-travis-cicd .
   - docker image ls
   - docker push oliver79913/node-travis-cicd
-  - docker push registry.heroku.com/node-travis-cicd;
+  - docker push registry.heroku.com/node-travis-cicd/web;
 
 deploy:
   provider: heroku
