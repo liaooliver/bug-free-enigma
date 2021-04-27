@@ -13,13 +13,13 @@ script:
   - docker build -t oliver79913/node-travis-cicd .
   - docker tag oliver79913/node-travis-cicd registry.heroku.com/node-travis-cicd/web
   - docker image ls
+  - docker push oliver79913/node-travis-cicd:latest
 
 deploy:
   provider: heroku
   api_key: $HEROKU_API_KEY
   app: $HEROKU_APP_NAME
   script: 
-    docker push oliver79913/node-travis-cicd:latest;
     docker push registry.heroku.com/node-travis-cicd/web;
     heroku container:push web
   on:
